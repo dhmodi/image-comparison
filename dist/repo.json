@@ -1,0 +1,53 @@
+{
+	"SUPC-8016205": {
+		"initial_review": [
+			"8016205-0000701000082-F.jpg",
+			"8016205-0000701000081-F.jpg"
+		],
+		"published": ""
+	},
+	"SUPC-0551157": {
+		"initial_review": [
+			"test5513.jpg",
+			"test5512.jpg",
+			"test5511.jpg",
+			"test5509.jpg"
+		],
+		"published": ""
+	},
+	"SUPC-9443979": {
+		"initial_review": [
+			"159335[1].JPG",
+			"159334[1].JPG"
+		],
+		"published": [
+			"159335.JPG",
+			"159334.JPG",
+			"116257.JPG"
+		]
+	},
+	"SUPC-7859879": {
+		"initial_review": [
+			"7859879-10037600134092_a1cc_en.tif"
+		],
+		"published": ""
+	},
+	"SUPC-4036935": {
+		"initial_review": [
+			"158475.JPG"
+		],
+		"published": [
+			"158472.JPG"
+		]
+	},
+	"SUPC-7028038": {
+		"initial_review": [
+			"158475.JPG"
+		],
+		"published": [
+			"7028038-00044700026960_A1LA.jpg",
+			"7028038-00044700026960_A1C1.jpg"
+		]
+	}
+
+}

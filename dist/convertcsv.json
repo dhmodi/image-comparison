@@ -1,0 +1,37 @@
+﻿[
+ {
+   "img2": "test5512.jpg",
+   "img1": "test5513.jpg",
+   "result": " Duplicate"
+ },
+ {
+   "img2": "158472.JPG",
+   "img1": "158475.JPG",
+   "result": " Duplicate"
+ },
+ {
+   "img2": "158631.JPG",
+   "img1": "7028038-00044700026960_A1C1.jpg",
+   "result": " Not_matching"
+ },
+ {
+   "img2": "158631.JPG",
+   "img1": "7028038-00044700026960_A1LA.jpg",
+   "result": " Not_matching"
+ },
+ {
+   "img2": "112706.JPG",
+   "img1": "7859879-10037600134092_a1cc_en.tif",
+   "result": " Not_matching"
+ },
+ {
+   "img2": "116257.JPG",
+   "img1": "159334[1].JPG",
+   "result": " Not_matching"
+ },
+ {
+   "img2": "116257.JPG",
+   "img1": "159335[1].JPG",
+   "result": " Not_matching"
+ }
+]
