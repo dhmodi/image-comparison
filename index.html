@@ -1,0 +1,76 @@
+<!doctype HTML>
+<html>
+	<head>
+	
+	<link rel="stylesheet" href="/css/reset.css" />
+	<link rel="stylesheet" href="/css/index.css" />
+	
+	</head>
+	<body ng-app="myApp" ng-controller="myCntrl">
+		<section>
+			<div class="left-panel">
+				<div class="search-box">
+					<select class="search-img" ng-model="imageName" ng-options="key as key for (key, value) in headings"/>
+					<input type="button" ng-click="searchImages()" value="Go" />
+				</div>
+				<div class="browse-panel">
+					<h1>{{imageDir}}</h1>
+					<nav class="nav-panel">
+						<h2 ng-show="subHead">Initial Review</h2>
+						<ul>
+							<li ng-repeat="item in data.initial_review">
+								<figure>
+									<img ng-src="/Sysco Image Repository/{{imageDir}}/Initial_Review/{{item}}" ng-click="selectImg1(item)" />
+									<figcaption ng-click="selectImg1(item)">{{item}}</figcaption>
+								</figure>
+							</li>
+						</ul>
+						
+						<h2 ng-show="subHead">Published</h2>
+						<ul>
+							<li ng-repeat="item in data.published">
+								<figure>
+									<img ng-src="/Sysco Image Repository/{{imageDir}}/Published/{{item}}" ng-click="selectImg2(item)" />
+									<figcaption ng-click="selectImg2(item)">{{item}}</figcaption>
+								</figure>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+			<div class="right-panel">
+				<div class="image-wrapper">
+					<h1 ng-show="image1">Initial Review</h1>
+					<div class="image1">
+						<div ng-show="!image1">Initial Review Image</div>
+						<figure ng-show="image1">
+							<img ng-src="/Sysco Image Repository/{{imageDir}}/Initial_Review/{{image1}}" />
+							<figcaption>{{image1}}</figcaption>
+						</figure>
+						
+					</div>
+				</div>
+				
+				<div class="image-wrapper">
+					<h1 ng-show="image2">Published</h1>
+					<div class="image2">
+						<div ng-show="!image2">Published Image</div>
+						<figure ng-show="image2">
+							<img ng-src="/Sysco Image Repository/{{imageDir}}/Published/{{image2}}" />
+							<figcaption>{{image2}}</figcaption>
+						</figure>
+					</div>
+				</div>
+
+				
+				<div class="img-compare" ng-class="cmpResult | lowercase">{{cmpResult | uppercase}}</div>
+			</div>
+		</section>
+
+
+		
+		<script src="/node_modules/angular/angular.js"></script>
+		<script src="/js/angular.min.js"></script>
+		<script src="/js/index.js"></script>
+	</body>
+</html>
