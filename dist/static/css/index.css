@@ -159,13 +159,13 @@ section {
 }
 
 .img-compare {
-    width: 125px;
+    width: 100px;
     height: 40px;
     text-align: center;
     padding: 6px;
     position: fixed;
     bottom: 6%;
-    left: 58%;
+    left: 50%;
 }
 
 .matching {
