@@ -10,8 +10,6 @@ app.controller("myCntrl", function($scope, $http){
 	$http.get("/repo.json")
 	.then(function(response){
 		$scope.headings = response.data;
-		// $scope.imageDir = imageName.toUpperCase();
-		// $scope.data = response.data[$scope.imageDir];
 	})
 	
 	$scope.searchImages = function() {
@@ -24,14 +22,7 @@ app.controller("myCntrl", function($scope, $http){
 			$scope.subHead = true;
 			$scope.imageDir = $scope.imageName;
 			$scope.data = $scope.headings[$scope.imageName];
-			console.log($scope.data);
 		}
-		// $http.get("http://www.json-generator.com/api/json/get/cfMEfGOIoi?indent=2")
-		// .then(function(response){
-			// $scope.headings = response.data;
-			// $scope.imageDir = imageName.toUpperCase();
-			// $scope.data = response.data[$scope.imageDir];
-		// })
 	}
 	
 	$scope.selectImg1 = function(img) {

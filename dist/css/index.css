@@ -4,12 +4,15 @@
 
 body {
     margin: 1%;
-    font-family: serif;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	width: 1254px;
+    height: 564px;
 }
 
 section {
     width: 100%;
-    height: auto;
+    height: 100%;
+	background: rgba(203, 203, 210, 0.15);
 }
 
 .left-panel {
@@ -34,17 +37,22 @@ section {
 
 .search-img {
     padding: 6px;
-    margin-right: 10px;
-    border-radius: 5px;
+    width: 60%;
+    border-radius: 4px 0 0 4px;
 }
 
 .search-box input[type="button"] {
     padding: 8px;
-    width: 50px;
-    border-radius: 5px;
-    border: none;
-    background: #8BC34A;
+    width: 22%;
+    background: #7bc47b;
     cursor: pointer;
+    color: #fff;
+    border: none;
+    border-radius: 0 4px 4px 0;
+}
+
+.search-box input[type="button"]:hover {
+	background: #046b04;
 }
 
 .browse-panel {
@@ -81,18 +89,21 @@ section {
 }
 
 .nav-panel ul li {
-    list-style-type: disc;
-    list-style-position: inside;
 	font-size: 22px;
+	list-style-image: url(/images/not_selected.jpg);
+}
+
+.nav-panel ul li.active {
+	list-style-image: url(/images/selected.jpg);
 }
 
 .nav-panel ul li figure {
     padding-left: 10px;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
 	cursor: pointer
 }
 
-.nav-panel ul li figure:after {
+.nav-panel ul li figure:after, .right-panel:after {
 	content: "";
 	clear: both;
 	display: table;
@@ -112,18 +123,21 @@ section {
 }
 
 .right-panel {
-    width: 60%;
+    width: 64%;
     height: auto;
     float: left;
-    margin-left: 6%;
-    padding: 1%;
+    margin: 3%;
+    padding: 2%;
+    background: #fff;
+    border: 2px dashed #aaa;
+    border-radius: 12px;
 }
 
 .image-wrapper {
     width: 300px;
     height: auto;
     float: left;
-	margin-right: 50px;
+    margin: 0 35px;
 }
 
 .image1, .image2 {
@@ -141,7 +155,7 @@ section {
     font-style: italic;
     color: rgb(128, 128, 128);
     margin: 2% auto;
-    padding: 24%;
+    padding: 20%;
     text-align: center;
 }
 
@@ -161,7 +175,7 @@ section {
     text-align: center;
     padding: 6px;
     position: fixed;
-    bottom: 10%;
+    bottom: 6%;
     left: 58%;
 }
 
