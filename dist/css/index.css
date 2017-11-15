@@ -2,17 +2,21 @@
 	box-sizing: border-box;
 }
 
-body {
-    margin: 1%;
-	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-	width: 1254px;
-    height: 564px;
-}
-
 section {
     width: 100%;
-    height: 100%;
+    height: auto;
 	background: rgba(203, 203, 210, 0.15);
+}
+
+.page-tab {
+    width: 100%;
+    height: 60px;
+    padding: 18px;
+    font-size: 20px;
+    color: #777;
+    font-weight: 400;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 4px;
 }
 
 .left-panel {
@@ -42,7 +46,7 @@ section {
 }
 
 .search-box input[type="button"] {
-    padding: 8px;
+    padding: 6px;
     width: 22%;
     background: #7bc47b;
     cursor: pointer;
@@ -71,9 +75,10 @@ section {
 
 .nav-panel {
     padding-left: 10px;
+	max-width: 270px;
 }
 
-.nav-panel h2 {
+.nav-panel h2, h1.head {
     font-size: 15px;
     font-weight: bold;
 }
@@ -97,13 +102,17 @@ section {
 	list-style-image: url(/images/selected.jpg);
 }
 
+.nav-panel ul li.active {
+	list-style-image: url(/images/selected.jpg);
+}
+
 .nav-panel ul li figure {
     padding-left: 10px;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 	cursor: pointer
 }
 
-.nav-panel ul li figure:after, .right-panel:after {
+.nav-panel ul li figure:after, .right-panel:after, section:after {
 	content: "";
 	clear: both;
 	display: table;
@@ -119,7 +128,8 @@ section {
     font-size: 15px;
     font-style: italic;
     padding-left: 70px;
-    padding-top: 15px;
+    padding-top: 10px;
+	word-wrap: break-word;
 }
 
 .right-panel {
@@ -127,22 +137,22 @@ section {
     height: auto;
     float: left;
     margin: 3%;
-    padding: 2%;
+    padding: 2% 0;
     background: #fff;
     border: 2px dashed #aaa;
     border-radius: 12px;
 }
 
 .image-wrapper {
-    width: 300px;
+    width: 43%;
     height: auto;
     float: left;
-    margin: 0 35px;
+    margin: 0 20px;
 }
 
 .image1, .image2 {
-    width: 300px;
-    height: 350px;
+    width: 100%;
+    height: 300px;
     border: 2px solid #d0d0d0;
 	margin-top: 6%;
 }
@@ -167,6 +177,7 @@ section {
 .image1 figcaption, .image2 figcaption {
     text-align: center;
     padding: 15px;
+	word-wrap: break-word;
 }
 
 .img-compare {
@@ -174,9 +185,9 @@ section {
     height: 40px;
     text-align: center;
     padding: 6px;
-    position: fixed;
-    bottom: 6%;
-    left: 58%;
+    position: absolute;
+    bottom: 7%;
+    left: 57%;
 }
 
 .matching {
