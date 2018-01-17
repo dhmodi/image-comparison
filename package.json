@@ -1,15 +1,24 @@
 {
-  "name": "abc",
-  "version": "1.0.0",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "angular": "^1.6.6"
-  },
-  "dependencies": {},
-  "description": "![alt text](http://s3.amazonaws.com/creativetim_bucket/products/32/original/opt_lbd_thumbnail.jpg \"Light Bootstrap Dashboard\")"
+	"name": "abc",
+	"version": "1.0.0",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "node server.js"
+	},
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"angular": "^1.6.6"
+	},
+	"dependencies": {
+		"express": "*",
+		"body-parser": "*",
+		"bcrypt": "^0.8.5"
+	},
+	"description": "",
+	"engines": {
+		"node": "6.11.1",
+		"npm": "3.10.9"
+	}
 }
