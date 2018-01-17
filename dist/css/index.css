@@ -10,9 +10,9 @@ section {
 
 .page-tab {
     width: 100%;
-    height: 60px;
-    padding: 18px;
-    font-size: 20px;
+    height: 38px;
+    padding: 6px 18px;
+    font-size: 19px;
     color: #777;
     font-weight: 400;
     border-bottom: 1px solid #ddd;
@@ -20,12 +20,12 @@ section {
 }
 
 .left-panel {
-    width: 30%;
-    max-width: 500px;
-    padding: 1%;
+    width: 20%;
+    max-width: 300px;
+    padding: 6px;
     float: left;
     height: auto;
-	min-height: 540px;
+	min-height: 500px;
 	max-height: 560px;
     overflow-y: auto;
     border-right: 2px solid rgb(208, 208, 208);
@@ -33,20 +33,21 @@ section {
 
 .search-box {
     width: 100%;
-    height: 40px;
+    height: 34px;
     padding: 0 0 9px;
     margin-bottom: 5px;
     border-bottom: 2px solid rgba(128, 128, 128, 0.37);
 }
 
 .search-img {
-    padding: 6px;
-    width: 60%;
+    padding: 3px;
+    width: 78%;
     border-radius: 4px 0 0 4px;
+	font-size: 12px;
 }
 
 .search-box input[type="button"] {
-    padding: 6px;
+    padding: 2px;
     width: 22%;
     background: #7bc47b;
     cursor: pointer;
@@ -63,30 +64,35 @@ section {
     width: 100%;
     height: auto;
     max-height: 700px;
-    margin-top: 15px;
-    padding-left: 10px;
 }
 
-.browse-panel h1 {
-    font-size: 20px;
+.browse-panel h1, .right-panel h1 {
+    font-size: 16px;
     font-weight: bold;
-    margin-bottom: 15px;
+}
+
+.browse-panel h1.dirName {
+	margin: 9px 0;
 }
 
 .nav-panel {
-    padding-left: 10px;
+    padding-left: 4px;
 	max-width: 270px;
 }
 
 .nav-panel h2, h1.head {
-    font-size: 15px;
+    font-size: 12px;
     font-weight: bold;
+}
+
+.nav-panel h2 {
+	margin: 5px 0;
 }
 
 .nav-panel ul {
     padding-left: 20px;
     font-size: 12px;
-	margin: 15px;
+	margin: 0;
 }
 
 .nav-panel ul > :last-child {
@@ -95,21 +101,13 @@ section {
 
 .nav-panel ul li {
 	font-size: 22px;
-	list-style-image: url(/images/not_selected.jpg);
-}
-
-.nav-panel ul li.active {
 	list-style-image: url(/images/selected.jpg);
-}
-
-.nav-panel ul li.active {
-	list-style-image: url(/images/selected.jpg);
+	margin: 8px 0;
 }
 
 .nav-panel ul li figure {
-    padding-left: 10px;
+    padding-left: 4px;
     margin-bottom: 10px;
-	cursor: pointer
 }
 
 .nav-panel ul li figure:after, .right-panel:after, section:after {
@@ -119,89 +117,166 @@ section {
 }
 
 .nav-panel ul li figure img {
-    width: 50px;
+    width: 26px;
 	height: auto;
 	float: left;
 }
 
 .nav-panel ul li figure figcaption {
-    font-size: 15px;
+    font-size: 8px;
     font-style: italic;
-    padding-left: 70px;
     padding-top: 10px;
 	word-wrap: break-word;
 }
 
 .right-panel {
-    width: 64%;
-    height: auto;
+    width: 79%;
+    height: 500px;
     float: left;
-    margin: 3%;
-    padding: 2% 0;
-    background: #fff;
-    border: 2px dashed #aaa;
-    border-radius: 12px;
+    margin: 0 10px 0 0;
+}
+
+.image-header {
+    float: left;
+    width: 100px;
+    height: 100%;
+}
+
+.image-header h1 {
+    margin: 100% 0;
+    text-align: center;
+    padding: 10px;
+    line-height: 2;
 }
 
 .image-wrapper {
-    width: 43%;
-    height: auto;
-    float: left;
-    margin: 0 20px;
+    width: 85%;
+    display: inline-flex;
 }
 
-.image1, .image2 {
-    width: 100%;
-    height: 300px;
-    border: 2px solid #d0d0d0;
-	margin-top: 6%;
+.image-wrapper ul {
+    margin: 4px 15px;
+	min-width: 40%;
+    width: min-content;
+    background: #fff;
+    padding: 3px;
+    border: 2px dashed #aaa;
+    border-radius: 8px;
+	float: left;
 }
 
-.image1 > div, .image2 > div{
-    width: 94%;
-    height: 94%;
-    background: rgba(128, 128, 128, 0.1);
-    font-size: 24px;
-    font-style: italic;
-    color: rgb(128, 128, 128);
-    margin: 2% auto;
-    padding: 20%;
+.image-wrapper ul li:first-child {
     text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    border-bottom: 1px solid #aaa;
+    margin: 0 25px 10px;
 }
 
-.image1 img, .image2 img {
-    width: 100%;
-	height:100%;
-	max-height: 220px;
+.image-wrapper ul li.initial-list, .image-wrapper ul li.published-list {
+    margin: 8px 5px;
+	display: inline-block;
 }
 
-.image1 figcaption, .image2 figcaption {
-    text-align: center;
-    padding: 15px;
-	word-wrap: break-word;
+.image-wrapper ul li.published-list {
+	margin-top: 6px;
 }
 
-.img-compare {
-    width: 150px;
-    height: 40px;
-    text-align: center;
-    padding: 6px;
+.image-wrapper ul li.initial-list img {
+	/* background-image: url('/images/alt-initial-img.PNG'); */
+	background-size: contain;
+	margin: 0 2px;
+}
+
+.image-wrapper ul li.published-list img {
+	/* background-image: url('/images/alt-published-img.PNG'); */
+	background-size: contain;
+	margin: 25px 2px 0;
+}
+
+.image-wrapper figure {
+	display: table-cell;
+}
+
+.image-wrapper img {
+    width: 140px;
+    height: 140px;
+}
+
+.image-wrapper figcaption {
+	font-size: 10px;
+    padding: 5px 0 0;
+	text-align: center;
+	min-height: 25px;
+}
+
+.divider {
+    width: 78%;
     position: absolute;
-    top: 86%;
-    left: 57%;
+    top: 48%;
+    left: 21%;
+    border: 4px solid #f1f1f2;
+    height: 4px;
+    background: #aaa;
+    padding: 1px;
 }
 
-.matching {
-	border: 4px solid #8bc34a ;
-	color: #8bc34a;
+.right-panel figure {
+	border: 1px solid #fff;
 }
 
-.not_matching {
-	border: 4px solid red;
-	color: red;
+.right-panel figure.not-unique img {
+	border: 1px solid red;
 }
 
-.duplicate {
-	border: 4px solid red;
-	color: red;
+.right-panel figure.unique img {
+	border: 1px solid #8BC34A;
+}
+
+.sidebar, .sidebar .sidebar-wrapper {
+	width: 150px;
+}
+
+.sidebar .sidebar-wrapper {
+	margin: 0;
+}
+
+.sidebar .logo {
+	padding: 10px;
+}
+
+.sidebar .nav li > a {
+	padding: 10px 0;
+	margin: 4px 0;
+}
+
+.main-panel {
+	width: calc(100% - 150px);
+}
+
+.main-panel > .footer {
+    position: fixed;
+    width: 88%;
+    bottom: 0;
+}
+
+.pagination {
+    margin: 8px 30%;
+}
+
+.pagination>li>a, .pagination>li>span {
+	color: #4db1e2;
+}
+
+.pagination>.active>a,
+.pagination>.active>span,
+.pagination>.active>a:hover,
+.pagination>.active>span:hover,
+.pagination>.active>a:focus, .pagination>.active>span:focus {
+	background-color: #4db1e2;
+    border-color: #59c3f1;
+}
+
+.pagination>li>a, .pagination>li>span {
+	font-size: 8px;
 }
