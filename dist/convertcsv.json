@@ -1,47 +1,102 @@
-﻿[
- {
-   "img2": "test5512.jpg",
-   "img1": "test5513.jpg",
-   "result": " Duplicate"
- },
- {
-   "img2": "158472.JPG",
-   "img1": "158475.JPG",
-   "result": " Duplicate"
- },
- {
-   "img2": "158631.JPG",
-   "img1": "7028038-00044700026960_A1C1.jpg",
-   "result": " Not_matching"
- },
- {
-   "img2": "158631.JPG",
-   "img1": "7028038-00044700026960_A1LA.jpg",
-   "result": " Not_matching"
- },
- {
-   "img2": "112706.JPG",
-   "img1": "7859879-10037600134092_a1cc_en.tif",
-   "result": " Not_matching"
- },
- {
-   "img2": "116257.JPG",
-   "img1": "159334[1].JPG",
-   "result": " Matching"
- },
- {
-   "img2": "116257.JPG",
-   "img1": "159335[1].JPG",
-   "result": " Not_matching"
- },
- {
-   "img2": "159335.JPG",
-   "img1": "159335[1].JPG",
-   "result": " Duplicate"
- },
- {
-   "img2": "159334.JPG",
-   "img1": "159334[1].JPG",
-   "result": " Duplicate"
- }
-]
+{
+  "SUPC-1011337": {
+    "Group 1": {
+      "Initial Review": [
+        {
+          "Name": "1011337-10032100085592_A1RA.jpg",
+          "Unique": 0
+        },{
+          "Name": "1011337-10032100085593_A1RA.jpg",
+          "Unique": 1
+        }
+      ],
+      "Published": [
+        {}
+      ]
+    },
+    "Group 2": {
+      "Initial Review": [
+        {}
+      ],
+      "Published": [
+        {
+          "Name": "115917.JPG",
+          "Unique": 0
+        },{
+          "Name": "115918.JPG",
+          "Unique": 1
+        }
+      ]
+    },
+    "Group 3": {
+      "Initial Review": [
+        {}
+      ],
+      "Published": [
+        {
+          "Name": "159498.JPG",
+          "Unique": 1
+        }
+      ]
+    },
+    "Group 4": {
+      "Initial Review": [
+        {}
+      ],
+      "Published": [
+        {
+          "Name": "159499.JPG",
+          "Unique": 1
+        }
+      ]
+    }
+  },
+  "SUPC-1028489": {
+    "Group 1": {
+      "Initial Review": [
+        {
+          "Name": "1028489-10019025110141_A1CC.jpg",
+          "Unique": 1
+        }
+      ],
+      "Published": [
+        {}
+      ]
+    },
+    "Group 2": {
+      "Initial Review": [
+        {}
+      ],
+      "Published": [
+        {
+          "Name": "146557.JPG",
+          "Unique": 1
+        }
+      ]
+    }
+  },
+  "SUPC-1029917": {
+    "Group 1": {
+      "Initial Review": [
+        {
+          "Name": "1029917-00070085163259_A1L1.jpg",
+          "Unique": 1
+        }
+      ],
+      "Published": [
+        {}
+      ]
+    },
+    "Group 2": {
+      "Initial Review": [
+        {}
+      ],
+      "Published": [
+        {
+          "Name": "173250.JPG",
+          "Unique": 1
+        }
+      ]
+    }
+  }
+}
