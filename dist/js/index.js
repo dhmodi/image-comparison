@@ -1,54 +1,65 @@
-var app = angular.module("myApp", []);
+var app = angular.module("myApp", ["ui.bootstrap"]);
 			
 app.controller("myCntrl", function($scope, $http){
 	
 	$scope.subHead = false;
-	$scope.imageName = "";
-	$scope.image1 = "";
-	$scope.image2 = "";
+	$scope.pagination = {
+		currentPage : 1,
+		pages : 1,
+		numPerPage : 2,
+		maxSize : 5
+	}
 	
-	$http.get("/repo.json")
+	$scope.filteredGroups = [];
+	$scope.groups = [];
+	
+	$http.get("/convertcsv.json")
 	.then(function(response){
 		$scope.headings = response.data;
-	})
+	});
 	
 	$scope.searchImages = function() {
-		$scope.image1 = "";
-		$scope.image2 = "";
-		$scope.cmpResult = "";
-		if($scope.imageName == "" || $scope.imageName == null) {
-			$scope.subHead = false;
-		} else {
+		$scope.pagination.pages = 1;
+		var data = $scope.headings[$scope.imageName];
+		var length = 0;
+		$scope.data = angular.copy(data);
+		angular.forEach(data, function(value, index) {
+			if(index != "$$hashKey") {
+			length++;
+			$scope.groups.push(index);
+			}
+		});
+		$scope.pagination.pages = length;
+		$scope.initialReview = [];
+		$scope.published = [];
+		if($scope.imageName) {
 			$scope.subHead = true;
-			$scope.imageDir = $scope.imageName;
-			$scope.data = $scope.headings[$scope.imageName];
-		}
-	}
-	
-	$scope.selectImg1 = function(img) {
-		$scope.image1 = img;
-		$scope.compareImg();
-	}
-	
-	$scope.selectImg2 = function(img) {
-		$scope.image2 = img;
-		$scope.compareImg();
-	}
-	
-	$scope.compareImg = function() {
-		$scope.cmpResult = "";
-		if($scope.image1 && $scope.image2) {
-			$http.get("/convertcsv.json")
-			.then(function(response){
-				$scope.match = response.data;
-				angular.forEach($scope.match, function(value, key) {
-					if(value.img1 == $scope.image1 && value.img2 == $scope.image2) {
-						$scope.cmpResult = value.result;
-					}
-				});
-				
-			})
 		}
 		
+		angular.forEach(data, function(value, key) {
+			angular.forEach(value, function(item, index) {
+				if(index == "Initial Review") {
+					for(i in item) {
+						if(item[i].Name) {
+							$scope.initialReview.push(item[i].Name);
+						}
+					}
+				} else if(index == "Published") {
+					for(i in item) {
+						if(item[i].Name) {
+							$scope.published.push(item[i].Name);
+						}
+					}
+				}
+			});
+		});
+		var begin = (($scope.pagination.currentPage - 1) * $scope.pagination.numPerPage), end = begin + $scope.pagination.numPerPage;
+		$scope.filteredGroups = $scope.groups.slice(begin, end);
+	}
+	
+	$scope.pageChanged = function() {
+		console.log($scope.pagination.currentPage);
+		var begin = (($scope.pagination.currentPage - 1) * $scope.pagination.numPerPage), end = begin + $scope.pagination.numPerPage;
+		$scope.filteredGroups = $scope.groups.slice(begin, end);
 	}
 });
