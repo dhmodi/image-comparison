@@ -159,7 +159,7 @@ section {
 	min-width: 40%;
     width: min-content;
     background: #fff;
-    padding: 3px;
+    padding: 1px 3px;
     border: 2px dashed #aaa;
     border-radius: 8px;
 	float: left;
@@ -222,15 +222,15 @@ section {
 }
 
 .right-panel figure {
-	border: 1px solid #fff;
+	border: 2px solid #fff;
 }
 
 .right-panel figure.not-unique img {
-	border: 1px solid red;
+	border: 2px solid red;
 }
 
 .right-panel figure.unique img {
-	border: 1px solid #8BC34A;
+	border: 2px solid #8BC34A;
 }
 
 .sidebar, .sidebar .sidebar-wrapper {
