@@ -62,7 +62,7 @@
                 <li class="active">
                     <a href="#"  data-toggle="tab">
                         <i class="pe-7s-user"></i>
-                        <p>Video Analytics</p>
+                        <p>Image Processing</p>
                     </a>
                 </li>
             </ul>
@@ -72,10 +72,10 @@
     <div class="main-panel">
 	
 	<section>
-		<div class="page-tab">Video Analytics</div>
+		<div class="page-tab">Image Processing</div>
 			<div class="left-panel">
 				<div class="search-box">
-					<select class="search-img" ng-model="imageName" ng-options="key as key for (key, value) in headings"/>
+					<select class="search-img" ng-model="imageName" ng-options="key as key for (key, value) in headings" ng-change="resetRepo()"/>
 					<input type="button" ng-click="searchImages()" value="Go" />
 				</div>
 				<div class="browse-panel" ng-if="subHead">
@@ -109,7 +109,7 @@
 					<h1>Published</h1>
 				</div>
 				<div class="divider" ng-show="subHead"></div>
-				<div class="image-wrapper">
+				<div class="image-wrapper" ng-if="subHead">
 					<ul ng-repeat="group in filteredGroups">
 						<li>{{group | uppercase}}</li>
 						<li class="initial-list">
