@@ -57,6 +57,12 @@ app.controller("myCntrl", function($scope, $http){
 		$scope.filteredGroups = $scope.groups.slice(begin, end);
 	}
 	
+	$scope.resetRepo = function() {
+		console.log($scope.subHead);
+		$scope.subHead = false;
+		console.log($scope.subHead);
+	}
+	
 	$scope.pageChanged = function() {
 		console.log($scope.pagination.currentPage);
 		var begin = (($scope.pagination.currentPage - 1) * $scope.pagination.numPerPage), end = begin + $scope.pagination.numPerPage;
